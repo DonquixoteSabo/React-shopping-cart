@@ -16,6 +16,9 @@ class App extends Component {
     };
   }
 
+  createOrder = order => {
+    alert('Need to save order for' + order.name)
+  };
 
   removeFromCart = product => {
     const cartItems = this.state.cartItems.slice();
@@ -92,7 +95,7 @@ class App extends Component {
                   <Products products={this.state.products} addToCart={this.addToCart} />
             </div>
             <div className="sidebar">
-               <Cart removeFromCart={this.removeFromCart} cartItems={this.state.cartItems} />
+               <Cart createOrder={this.createOrder} removeFromCart={this.removeFromCart} cartItems={this.state.cartItems} />
             </div>
           </div>
         </main>
