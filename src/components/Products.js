@@ -5,7 +5,7 @@ import formatCurrency from '../util';
 class Products extends Component {
     render() { 
         return (
-            <div>
+            <div> 
                 <ul className='products'>
                     {this.props.products.map(product => (
                         <li key={product._id}>
